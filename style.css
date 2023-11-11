@@ -1,0 +1,142 @@
+/* Import the 'Muli' font from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+/* Universal box model for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Styling for the body */
+body {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #ffffff;
+  display: flex;
+  font-family: "Muli", sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Animation for the background wave effect */
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Styling for the heading, checkboxes, and other elements */
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  margin-right: 0;
+}
+
+.container {
+  background: #252529;
+  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  width: 350px;
+  max-width: 100%;
+}
+
+.result-container {
+  background: #2b2b2f;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.result-container .btn {
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 40px;
+  width: 40px;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: #3b3b98;
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #6c63ff;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  background-color: #1e1e1f;
+  color: #ffffff;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Animation for the background wave effect */
+body {
+  animation: waveAnimation 10s infinite linear;
+  background-size: 300% 100%;
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 400px) {
+  .result-container {
+    font-size: 14px;
+  }
+}
